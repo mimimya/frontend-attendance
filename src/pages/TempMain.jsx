@@ -23,7 +23,7 @@ const TempMain = () => {
       </a>
     </div>
     <div>
-      <a to="/" href='/theacher'>
+      <a to="/" href='/teacherMain'>
         toTeacher
       </a>
     </div>
@@ -31,6 +31,9 @@ const TempMain = () => {
       <a to="/" href='/student'>
         toStudent
       </a>
+    </div>
+    <div>
+      <a href='/test'>to test</a>
     </div>
     </section>
 
