@@ -1,49 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import DefaultLayout from './layouts/DefaultLayout'
-import { Login } from './pages/login'
+import ChangePw from './pages/ChangePw';
+import TempMain from './pages/TempMain';
+import Login from './pages/login';//경로 체크 해주세요
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-        <header><h1>만들 내용</h1></header>
-    <DefaultLayout>
-      <div>
-        <section>
-        <div>
-          <a to="/" href='/'>
-            toMain
-          </a>
-        </div>
-        <div>
-          <a to="/" href='/login'>
-            toLogin
-          </a>
-        </div>
-        <div>
-          <a to="/" href='/changePW'>
-            tochangePW
-          </a>
-        </div>
-        <div>
-          <a to="/" href='/theacher'>
-            toTeacher
-          </a>
-        </div>
-        <div>
-          <a to="/" href='/student'>
-            toStudent
-          </a>
-        </div>
-        </section>
-
-     </div>
-      </DefaultLayout>
-    </>
+    <div className="App">
+    <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<TempMain/>}/>
+          <Route path="/login" element={<Login/>}></Route>
+          <Route path="/changePW" element={<ChangePw/>}></Route>
+        </Routes>
+    </BrowserRouter>
+      </div>
   )
 }
 
