@@ -8,7 +8,7 @@ function Test() {
 
   useEffect(() => {
     // Fetch late attendees data from API
-    fetchLateAttendees();
+    fetchLateAttendees(); //서버 통신
   }, [date]);
 
   const fetchLateAttendees = () => {
@@ -52,6 +52,7 @@ function Test() {
 
   return (
     <div className="container mx-auto mt-10">
+      <div className="px-5 py-4 border-b border-slate-100 dark:border-slate-700"><h2 class="font-semibold text-slate-800 dark:text-slate-100">Direct VS Indirect</h2></div>
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-semibold">Admin Attendance Management</h1>
         <button onClick={handleLogout} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">로그아웃</button>

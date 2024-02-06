@@ -1,5 +1,6 @@
 import './App.css'
 import ChangePw from './pages/ChangePw';
+import StudentMain from './pages/StudentMain';
 import TeacherMain from './pages/TeacherMain';
 import TempMain from './pages/TempMain';
 import Login from './pages/login';//경로 체크 해주세요
@@ -16,6 +17,7 @@ function App() {
           <Route path="/login" element={<Login/>}></Route>
           <Route path="/changePW" element={<ChangePw/>}></Route>
           <Route path="/teacherMain" element={<TeacherMain/>}></Route>
+          <Route path="/studentMain" element={<StudentMain/>}></Route>
           <Route path="/test" element={<Test/>}></Route>
         </Routes>
     </BrowserRouter>
