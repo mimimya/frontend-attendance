@@ -2,7 +2,7 @@ import {React } from 'react'
 
 const Seat = ({children}) => {
   return (
-    <div className='w-500 h-500 m-2 justify-center flex bg-yellow-300'>
+    <div className='m-2 w-20 h-20 flex justify-center items-center border-b border-slate-500 bg-slate-50'>
         {children}
     </div>
   )

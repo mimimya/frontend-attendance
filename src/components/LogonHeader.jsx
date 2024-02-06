@@ -3,30 +3,29 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 const LogonHeader = ({children}) => {
 const navigate = useNavigate(); 
-const handleLogout = ()=>{
-    localStorage.clear();
-    const memberInfo = {
-        userId: localStorage.getItem("userId"),
-      };
-      axios.post('/logout', memberInfo, {
-        headers: {
-          'Content-Type': 'application/json',
-          'ngrok-skip-browser-warning': '69420',
-        },
-      })
-      .then((response) => {
-        // 성공적인 응답 처리
-        console.log(response.data);
-        if(response.data.message == "로그아웃이 완료되었습니다."){
-            localStorage.clear();
+  const handleLogout = ()=>{
+    localStorage.clear();//Test용
+    
+    /*axios.get('/logout', {
+      headers: {
+        'Content-Type': 'application/json',
+        'ngrok-skip-browser-warning': '69420',
+      },
+    })
+    .then((response) => {
+      // 성공적인 응답 처리
+      console.log(response.data);
+      if(response.data.message == "로그아웃이 완료되었습니다."){
+          localStorage.clear();
           console.log('로그인 페이지로 이동');
           navigate('/login');
-        }
-      })
-      .catch((error) => {
-        // 에러 처리
-        console.log('Error while fetching data:', error);
-      });
+      }
+    })
+    .catch((error) => {
+      // 에러 처리
+      console.log('Error while fetching data:', error);
+    });
+    */
 }
     return (
     <header>
